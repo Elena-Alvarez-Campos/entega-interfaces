@@ -13,10 +13,15 @@ public class SensorContaminacion extends DispositivoIoT implements  Mantenible{
     public double getNivelCO2() {
         return nivelCO2;
     }
+
+    @Override
+    public String getId() {
+        return super.getId();
+    }
     //metodos
     @Override
-    public void procesarDatos(){
-
+    public String procesarDatos(){
+        return "Sensor: "+getId()+"Nivel C02: "+nivelCO2+" Encendido: "+getEncendidio();
     }
 
     //Mantenimiento

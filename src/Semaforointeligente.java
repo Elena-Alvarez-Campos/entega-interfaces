@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Semaforointeligente extends DispositivoIoT implements ControlableRemotamente, Mantenible{
     //Atributos
     private String estadoActual;
@@ -15,8 +17,8 @@ public class Semaforointeligente extends DispositivoIoT implements ControlableRe
     }
     //Metodos
     @Override
-    public void procesarDatos(){
-
+    public String procesarDatos(){
+         return "Semáforo: "+getId()+" Estado: "+estadoActual+" Encendido: "+getEncendidio();
     }
 
     //Mantenimiento
@@ -33,6 +35,6 @@ public class Semaforointeligente extends DispositivoIoT implements ControlableRe
     }
     @Override
     public void reiniciarDispositivo(){
-
+        JOptionPane.showMessageDialog(null, "Se ha reiniciado");
     }
 }

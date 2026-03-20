@@ -36,5 +36,5 @@ public abstract class DispositivoIoT {
         this.encendidio=false;
     }
     //metodo abstracto
-    public abstract void procesarDatos();
+    public abstract String procesarDatos();
 }
