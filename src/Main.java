@@ -3,8 +3,17 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<DispositivoIoT> lista =new ArrayList<DispositivoIoT>();
-        GestorSmartCity gestor =new GestorSmartCity(lista);
+        ArrayList<DispositivoIoT> dispositivos =new ArrayList<DispositivoIoT>();
+
+        Semaforointeligente sem1 =new Semaforointeligente("Verde","1","Vigo");
+        PanelInformativo panel1 =new PanelInformativo("Hola.","2","Aqui");
+        SensorContaminacion sensor1=new SensorContaminacion(1,"3","Allí");
+
+        dispositivos.add(sem1);
+        dispositivos.add(sensor1);
+        dispositivos.add(panel1);
+
+        GestorSmartCity gestor =new GestorSmartCity(dispositivos);
         //Menú
         boolean programa=true;
         int opcion=0;

@@ -35,6 +35,6 @@ public class Semaforointeligente extends DispositivoIoT implements ControlableRe
     }
     @Override
     public void reiniciarDispositivo(){
-        JOptionPane.showMessageDialog(null, "Se ha reiniciado");
+        System.out.println("Se ha reiniciado");
     }
 }

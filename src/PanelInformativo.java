@@ -11,7 +11,7 @@ public class PanelInformativo extends DispositivoIoT implements ControlableRemot
     //Metodos
     @Override
     public String procesarDatos(){
-        return  "Panel: "+getId()+" Texto mostrado: "+textoMostrado+" Encendido: "+getEncendidio();;
+        return  "Panel: "+getId()+" Texto mostrado: "+textoMostrado+" Encendido: "+getEncendidio();
     }
     //Control remoto
     @Override
@@ -20,7 +20,7 @@ public class PanelInformativo extends DispositivoIoT implements ControlableRemot
     }
     @Override
     public void reiniciarDispositivo(){
-        JOptionPane.showMessageDialog(null, "Se ha reiniciado");
+        System.out.println( "Se ha reiniciado");
     }
 
 }

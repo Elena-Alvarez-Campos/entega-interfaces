@@ -78,7 +78,7 @@ public class GestorSmartCity {
     //Mostrar estado red**************************************************
     public String mostrarEstado(){
         String dispositivos="";
-        for(int i=0; i<=this.lista.size();i++){
+        for(int i=0; i<lista.size();i++){
             dispositivos+=this.lista.get(i).procesarDatos()+"\n";
         }
         return dispositivos;
@@ -86,21 +86,24 @@ public class GestorSmartCity {
     //Mantenimiento
     public void mantenimientoGlobal(){
         double costeFin=0;
-        for(int i=0; i<=this.lista.size();i++){
+        for(int i=0; i<this.lista.size();i++){
             if(this.lista.get(i) instanceof Mantenible==true){
                 costeFin += ((Mantenible) this.lista.get(i)).calcularCosteMantenimiento();
-                JOptionPane.showMessageDialog(null,"Factura total: "+costeFin);
+
             }
         }
+        JOptionPane.showMessageDialog(null,"Factura total: "+costeFin);
     }
     //ReinicioEmergencia
     public void reinicioEmergencia(){
-        for(int i=0; i<=this.lista.size();i++){
+        for(int i=0; i<this.lista.size();i++){
             if(this.lista.get(i) instanceof ControlableRemotamente==true){
                 ((ControlableRemotamente) this.lista.get(i)).conectarWifi();
                 ((ControlableRemotamente) this.lista.get(i)).reiniciarDispositivo();
+
             }
         }
+        JOptionPane.showMessageDialog(null,"reinicio elaborado");
     }
 
 }
